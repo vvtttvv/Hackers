@@ -1,6 +1,6 @@
 import styles from './AdminPage.module.css'
 import Left from '../features/Left/left'
-
+import CollapsibleTable from '../features/right/Right'
 export default function AdminPage() {
 
   return (
@@ -9,7 +9,7 @@ export default function AdminPage() {
         <Left />
       </div>
       <div className={styles.secondBlock}>
-        Second block
+        <CollapsibleTable />
       </div>
     </div>
   )
