@@ -1,8 +1,11 @@
 from flask import Flask
 from flask import jsonify
 from flask import request
+from flask_cors import CORS
 
 app = Flask(__name__)
+
+CORS(app)
 
 dummy_invoice_data = [
     {
@@ -80,9 +83,9 @@ def header():
     return jsonify("NONE")
 
 
-@app.route("/api/kiki")
-def agenda(q):
-    resp = groq_chat(request.args.get("q", ""))
+@app.route("/api/kiki/")
+def agenda():
+    resp = groq_chat(request.args.get("q"))
     return resp
 
 
@@ -93,13 +96,12 @@ def documents():
 
 def groq_chat(q):
     return """
-## This is a response from Kiki ><
-Here are your steps:
-1. step 1
-2. one more step
-3. last step :3
-
-"""
+## This is a response from Kiki ><\n
+Here are your steps:\n
+1. step 1\n
+2. one more step\n
+3. last step :3\n
+""" + q
 
 
 if __name__ == "__main__":
