@@ -1,12 +1,16 @@
 .wrapper{
-    padding: 2%;
-    display: flex;
+    background-image: url('./img/photo-1577046848358-4623c0859b8a.jpg');
+    min-height: 100vh;
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
 }
 
-.firstBlock{
-    width: 60%;
+.header{
+    position: absolute;
+    width: 100%;
 }
 
-.secondBlock{
-    width: 25%;
+.footer{
+    padding-top: 50px;
 }
