@@ -61,12 +61,12 @@ dummy_invoice_data = [
 
 @app.route("/")
 def home():
-    return "<p>Wassup</p>"
+    return "<p>Ho Ho Ho AAAAAAAAAAA</p>"
 
 
 @app.route("/api/header/")
 def header():
-    return jsonify(dummy_data)
+    return jsonify(dummy_invoice_data)
 
 
 if __name__ == "__main__":
