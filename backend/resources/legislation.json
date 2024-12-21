@@ -1,0 +1,426 @@
+[
+  {
+    "id" : 1,
+    "desc" : "Cerere de inregistrare a modificarilor si completarilor in datele inscrise in Registrul de stat al intreprinzatorilor individuali",
+    "form" : "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/inregistrarea-de-stat/16-Cerere-inregistrare-intreprinzatorilor-individuali.pdf",
+    "instruct" : "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/inregistrarea-de-stat/16-Instructiuni-inregistrare-intreprinzatorilor-individuali.pdf"
+  },
+  {
+    "id" : 2,
+    "desc" : "Cerere de inregistrare a modificarilor si completarilor in datele inscrise in Registrul de stat al persoanelor juridice",
+    "form" : "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/inregistrarea-de-stat/3.1-Cerere-inregistrare-datele-inscrise-persoanelor-juridice.pdf",
+    "instruct" : "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/inregistrarea-de-stat/3.1-Instructiuni-inregistrare-datele-inscrise-persoanelor-juridice.pdf"
+  },
+  {
+    "id" : 3,
+    "desc" : "Cerere de înregistrare a modificărilor în datele înscrise în Registrul de stat al gospodăriilor ţărăneşti (de fermier)",
+    "form" : "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/inregistrarea-de-stat/27-2.cereri_modificare-GT.pdf",
+    "instruct" : "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/inregistrarea-de-stat/27-2.instructiune_cerere_modificare-GT.pdf"
+  },
+  {
+    "id" : 4,
+    "desc" : "Declarația privind beneficiarul efectiv/beneficiarii efectivi ai persoanei juridice (modificări, reorganizări, suspendarea/reluarea activității, radieri) - Formularul nr. BE-3",
+    "form" : "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/alte/Formularul-BE-3.pdf",
+    "instruct" : ""
+  }
+  ,
+  {
+    "id" : 5,
+    "desc" : "Declarația privind beneficiarul efectiv/beneficiarii efectivi ai organizației necomerciale (modificări, reorganizări, suspendarea/reluarea activității, radieri) - Formularul nr. BE-5",
+    "form" : "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/alte/Formularul-BE-5.pdf",
+    "instruct" : ""
+  }
+  ,
+  {
+    "id" : 6,
+    "desc" : "Declarația privind beneficiarul efectiv/beneficiarii efectivi ai gospodăriei țărănești (de fermier) (modificări, reorganizări, radieri) - Formularul nr. BE-7",
+    "form" : "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/alte/Formularul-BE-7.pdf",
+    "instruct" : ""
+  }
+  ,
+  {
+    "id" : 7,
+    "desc" : "Declarația privind beneficiarul efectiv a întreprinzătorului individual - Formularul nr. BE-8",
+    "form" : "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/alte/Formularul-BE-8.pdf",
+    "instruct" : ""
+  }
+  ,
+  {
+    "id" : 8,
+    "desc" : "Declarația privind beneficiarul efectiv/beneficiarii efectivi ai persoanei juridice - Formularul nr. BE-9 (societate cotată pe o piață reglementată)",
+    "form" : "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/alte/Formularul-BE-9.pdf",
+    "instruct" : ""
+  },
+  {
+    "id" : 9,
+    "desc" : "Declarația privind beneficiarul efectiv/beneficiarii efectivi ai agenţilor economici din regiunea transnistreană",
+    "form" : "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/alte/07-Declaratia%20privind%20beneficiarul%20efectivbeneficiarii%20efectivi%20pentru%20agentii%20economici%20din%20regiunea%20transnistreana.pdf",
+    "instruct" : ""
+  },
+  {
+        "id": 10,
+        "desc": "Cerere de verificare si rezervare a denumirii persoanei juridice",
+        "form": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/inregistrarea-de-stat/28 Cerere de verificare si rezervare a denumirii persoanei juridice.pdf",
+        "instruct": null
+    },
+    {
+        "id": 11,
+        "desc": "Cerere privind înregistrarea de stat a gospodăriei ţărăneşti (de fermier)",
+        "form": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/inregistrarea-de-stat/26-1.cerere_inregistrare-GT.pdf",
+        "instruct": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/inregistrarea-de-stat/26-1.instructiune_cerere_inregistrare-GT.pdf"
+    },
+    {
+        "id": 12,
+        "desc": "Cerere de înregistrare a modificărilor în datele înscrise în Registrul de stat al gospodăriilor ţărăneşti (de fermier)",
+        "form": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/inregistrarea-de-stat/27-2.cereri_modificare-GT.pdf",
+        "instruct": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/inregistrarea-de-stat/27-2.instructiune_cerere_modificare-GT.pdf"
+    },
+    {
+        "id": 13,
+        "desc": "Cerere de radiere a gospodăriei ţărăneşti (de fermier)din Registrul de stat al gospodăriilor ţărăneşti (de fermier)",
+        "form": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/inregistrarea-de-stat/28-3.cerere_radiere GT_web.pdf",
+        "instruct": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/inregistrarea-de-stat/28-3.instructiuni_radiere-GT_web.pdf"
+    },
+    {
+        "id": 14,
+        "desc": "Cerere privind inregistrarea de stat a persoanei juridice",
+        "form": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/inregistrarea-de-stat/1 Cerere privind inregistrarea de stat a persoanei juridice.pdf",
+        "instruct": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/inregistrarea-de-stat/1 Instructiuni privind completarea cererii privind inregistrarea de stat a persoanei juridice.pdf"
+    },
+    {
+        "id": 15,
+        "desc": "Cerere privind inregistrarea de stat a intreprinzatorului individual",
+        "form": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/inregistrarea-de-stat/2 Cerere privind inregistrarea de stat a intreprinzatorului individual.pdf",
+        "instruct": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/inregistrarea-de-stat/2 Instructiuni privind completarea cererii privind inregistrarea de stat a intreprinzatorului individual.pdf"
+    },
+    {
+        "id": 16,
+        "desc": "Cerere de inregistrare a modificarilor si completarilor in datele inscrise in Registrul de stat al persoanelor juridice si in actul de constituire",
+        "form": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/inregistrarea-de-stat/3 Cerere de inregistrare a modificarilor si completarilor in datele inscrise in Registrul de stat al persoanelor juridice si in actul de constituire.pdf",
+        "instruct": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/inregistrarea-de-stat/3-Instructiuni privind completarea cererii de inregistrare a modificarilor si completarilor-actul de constituire.pdf"
+    },
+    {
+        "id": 17,
+        "desc": "Cerere de inregistrare a modificarilor si completarilor in datele inscrise in Registrul de stat al persoanelor juridice",
+        "form": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/inregistrarea-de-stat/3.1-Cerere-inregistrare-datele-inscrise-persoanelor-juridice.pdf",
+        "instruct": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/inregistrarea-de-stat/3.1-Instructiuni-inregistrare-datele-inscrise-persoanelor-juridice.pdf"
+    },
+    {
+        "id": 18,
+        "desc": "Cerere de inregistrare a modificarilor in datele inscrise in Registrul de stat al persoanelor juridice privind administratorul persoanei juridice",
+        "form": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/inregistrarea-de-stat/4-Cerere-inregistrare-administratorul-persoanei-juridice.pdf",
+        "instruct": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/inregistrarea-de-stat/4-Instructiuni-administratorul-persoanei-juridice.pdf"
+    },
+    {
+        "id": 19,
+        "desc": "Cerere de inregistrare a modificarilor si completarilor in datele inscrise in Registrul de stat si in actul de constituire privind modificarea componentei asociatilor",
+        "form": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/inregistrarea-de-stat/5-Cerere-modificarea-componentei-asociatilor.pdf",
+        "instruct": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/inregistrarea-de-stat/5-Instructiuni-modificarea componentei asociatilor.pdf"
+    },
+    {
+        "id": 20,
+        "desc": "Cerere de inregistrare a modificarilor in datele inscrise in Registrul de stat al persoanelor juridice si in actul de constituire privind reducerea capitalului social",
+        "form": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/inregistrarea-de-stat/7-Cerere-capitalului-social.pdf",
+        "instruct": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/inregistrarea-de-stat/7-Instructiuni-capitalului-social.pdf"
+    },
+    {
+        "id": 21,
+        "desc": "Cerere de inregistrare a modificarilor in datele inscrise in Registrul de stat al persoanelor juridice privind componenta nominala a organelor de conducere si/sau supraveghere a persoanei juridice",
+        "form": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/inregistrarea-de-stat/8-Cerere-supraveghere-persoanei-juridice.pdf",
+        "instruct": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/inregistrarea-de-stat/8-Instructiuni-supraveghere-persoanei-juridice.pdf"
+    },
+    {
+        "id": 22,
+        "desc": "Cerere de inregistrare a modificarilor în Registrul de stat privind excluderea persoanei juridice din categoria persoanelor juridice pasive",
+        "form": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/inregistrarea-de-stat/9-Cerere-categoria-persoanelor-juridice-pasive.pdf",
+        "instruct": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/inregistrarea-de-stat/9-Instructiuni-categoria-persoanelor-juridice-pasive.pdf"
+    },
+    {
+        "id": 23,
+        "desc": "Cerere de inregistrare in Registrul de stat al persoanelor juridice a suspendarii activitatii persoanei juridice",
+        "form": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/inregistrarea-de-stat/10-Cerere-activitatii-persoanei-juridice.pdf",
+        "instruct": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/inregistrarea-de-stat/10-Instructiuni-activitatii-persoanei-juridice.pdf"
+    },
+    {
+        "id": 24,
+        "desc": "Cerere de inregistrare in Registrul de stat al persoanelor juridice a reluarii activitatii persoanei juridice",
+        "form": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/inregistrarea-de-stat/11-Cerere-activitatii-persoanei-juridice.pdf",
+        "instruct": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/inregistrarea-de-stat/11-Instructiuni-activitatii-persoanei-juridice.pdf"
+    },
+    {
+        "id": 25,
+        "desc": "Cerere de inregistrare a inceperii procedurii de reorganizare a persoanei juridice",
+        "form": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/inregistrarea-de-stat/12 Cerere de inregistrare a inceperii procedurii de reorganizare a persoanei juridice.pdf",
+        "instruct": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/inregistrarea-de-stat/12 Instructiuni privind completarea cererii de inregistrare a inceperii procedurii de reorganizare a persoanei juridice.pdf"
+    },
+    {
+        "id": 26,
+        "desc": "Cerere de inregistrare a reorganizarii persoanei juridice",
+        "form": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/inregistrarea-de-stat/13 Cerere de inregistrare a reorganizarii persoanei juridice.pdf",
+        "instruct": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/inregistrarea-de-stat/13 Instructiuni privind completarea cererii de inregistrare a reorganizarii persoanei juridice.pdf"
+    },
+    {
+        "id": 27,
+        "desc": "Cerere de inregistrare a inceperii procedurii de dizolvare a persoanei juridice",
+        "form": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/inregistrarea-de-stat/14 Cerere de inregistrare a inceperii procedurii de dizolvare a persoanei juridice.pdf",
+        "instruct": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/inregistrarea-de-stat/14 Instructiuni privind completarea cererii de inregistrare  a inceperii procedurii de dizolvare a persoanei juridice.pdf"
+    },
+    {
+        "id": 28,
+        "desc": "Cerere privind radierea persoanei juridice din Registrul de stat al persoanelor juridice",
+        "form": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/inregistrarea-de-stat/15 Cerere cu privire la radierea persoanei juridice.pdf",
+        "instruct": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/inregistrarea-de-stat/15 Instructiuni privind completarea cererii cu privire la radierea persoanei juridice.pdf"
+    },
+    {
+        "id": 29,
+        "desc": "Cerere privind radierea persoanei juridice inactive din Registrul de stat al persoanelor juridice",
+        "form": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/inregistrarea-de-stat/15.1-Cerere-radierea-persoanei-juridice-inactive-persoanelor-juridice.pdf",
+        "instruct": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/inregistrarea-de-stat/15.1-Instructiuni-radierea-persoanei-juridice-inactive-persoanelor-juridice.pdf"
+    },
+    {
+        "id": 30,
+        "desc": "Cerere de inregistrare a modificarilor si completarilor in datele inscrise in Registrul de stat al intreprinzatorilor individuali",
+        "form": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/inregistrarea-de-stat/16-Cerere-inregistrare-intreprinzatorilor-individuali.pdf",
+        "instruct": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/inregistrarea-de-stat/16-Instructiuni-inregistrare-intreprinzatorilor-individuali.pdf"
+    },
+    {
+        "id": 31,
+        "desc": "Cerere privind radierea intreprinzatorilui individual din Registrul de stat al intreprinzatorilor individuali",
+        "form": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/inregistrarea-de-stat/17-Cerere-radierea-intreprinzatorilor-individuali.pdf",
+        "instruct": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/inregistrarea-de-stat/17-Instructiuni-radierea-intreprinzatorilor-individuali.pdf"
+    },
+    {
+        "id": 32,
+        "desc": "Cerere de corectare a erorilor",
+        "form": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/inregistrarea-de-stat/18 Cerere de corectare a erorilor.pdf",
+        "instruct": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/inregistrarea-de-stat/18 Instructiuni privind completarea cererii de corectare a erorilor.pdf"
+    },
+    {
+        "id": 33,
+        "desc": "Cerere de inregistrare a Cabinetului Individual al Medicului de Familie",
+        "form": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/inregistrarea-de-stat/19 Cerere de inregistrare a Cabinetului Individual al Medicului de Familie.pdf",
+        "instruct": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/inregistrarea-de-stat/19 Instructiuni privind completarea cererii de inregistrare a Cabinetului Individual al Medicului de Familie.pdf"
+    },
+    {
+        "id": 34,
+        "desc": "Cerere de inregistrare a Centrului Medicilor de Familie",
+        "form": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/inregistrarea-de-stat/20 Cerere de inregistrare a Centrului Medicilor de Familie.pdf",
+        "instruct": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/inregistrarea-de-stat/20 Instructiuni privind completarea cererii de inregistrare a Centrului Medicilor de Familie.pdf"
+    },
+    {
+        "id": 35,
+        "desc": "Cerere de inregistrare a reorganizarii Centrului Medicilor de Familie",
+        "form": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/inregistrarea-de-stat/21 Cerere de inregistrare a reorganizarii Centrului Medicilor de Familie.pdf",
+        "instruct": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/inregistrarea-de-stat/21 Instructiuni privind completarea cererii de inregistrare a reorganizarii Centrului Medicilor de Familie.pdf"
+    },
+    {
+        "id": 36,
+        "desc": "Cerere de inregistrare a modificarilor in datele inscrise in Registrul de stat al persoanelor juridice privind incetarea calitatii de administrator",
+        "form": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/inregistrarea-de-stat/22-Cerere-calitatii-administrator.pdf",
+        "instruct": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/inregistrarea-de-stat/22-Instructiuni-calitatii-administrator.pdf"
+    },
+    {
+        "id": 37,
+        "desc": "Cerere de inregistrare a sucursalei",
+        "form": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/inregistrarea-de-stat/23 Cerere de inregistrare a sucursalei.pdf",
+        "instruct": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/inregistrarea-de-stat/23 Instructiuni privind completarea cererii de inregistrare a sucursalei.pdf"
+    },
+    {
+        "id": 38,
+        "desc": "Cerere de inregistrare a modificarilor in datele inscrise in Registrul de stat al persoanelor juridice privind reprezentantul administratorului - persoana juridica",
+        "form": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/inregistrarea-de-stat/24-Cerere-administratorului-persoana-juridica.pdf",
+        "instruct": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/inregistrarea-de-stat/24-Instructiuni-administratorului-persoana-juridica.pdf"
+    },
+    {
+        "id": 39,
+        "desc": "Formular privind evidența organelor centrale de specialitate ale administrației publice și autorităților administrației publice locale",
+        "form": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/inregistrarea-de-stat/formular_autor_publ_1.pdf",
+        "instruct": null
+    },
+    {
+        "id": 40,
+        "desc": "Cerere privind înscrierea provizorie în Registrul de stat al unităților de drept a agentului economic din regiunea transnistreană",
+        "form": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/inregistrarea-de-stat/10.1-Cerere privind inscrierea provizorie in Registrul de stat al unitatilor de drept a agentului economic din regiunea transnistriana.pdf",
+        "instruct": null
+    },
+    {
+        "id": 41,
+        "desc": "Cerere privind excluderea din Registrul de stat al unităților de drept a agentului economic din regiunea transnistreană",
+        "form": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/inregistrarea-de-stat/11.1-Crerere privind excluderea din Registrul de stat al unitatilor de drept a agentului economic din regiunea transnistriana.pdf",
+        "instruct": null
+    },
+    {
+        "id": 42,
+        "desc": "Cerere privind modificarea datelor înscrise provizoriu în Registrul de stat al unităților de drept",
+        "form": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/inregistrarea-de-stat/12.1-Cerere privind modificarea datelor inscrise provizoriu in Registrul de stat al unitatilor de drept.pdf",
+        "instruct": null
+    },
+  {
+        "id": 43,
+        "desc": "Model de act adiţional privind modificarea în actul de constituire",
+        "pdf": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/on/24-model-act-aditional-privind-modificarea-actul-de-constituire_0.pdf",
+        "doc": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/on/24-model-act-aditional-privind-modificarea-actul-de-constituire_0.docx"
+    },
+    {
+        "id": 44,
+        "desc": "Model de statut pentru Organizaţia Sindicală Primară",
+        "pdf": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/on/23_model_de_statut_pentru_organizatie_sindicala_primara_0.pdf",
+        "doc": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/on/23_model_de_statut_pentru_organizatie_sindicala_primara.docx"
+    },
+    {
+        "id": 45,
+        "desc": "Model de statut pentru Comitet Sectorial pentru formare profesională",
+        "pdf": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/on/22-model_statut_comitet_sectorial_2.pdf",
+        "doc": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/on/22-model_statut_comitet_sectorial_2.doc"
+    },
+    {
+        "id": 46,
+        "desc": "Declarația privind beneficiarul efectiv/beneficiarii efectivi ai organizației necomerciale (constituire) - Formularul nr. BE-4",
+        "pdf": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/on/Formularul-nr.-BE-4.pdf",
+        "doc": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/on/Formularul-nr.-BE-4.doc"
+    },
+    {
+        "id": 47,
+        "desc": "Declarația privind beneficiarul efectiv/beneficiarii efectivi ai organizației necomerciale (modificări, reorganizări, suspendarea/reluarea activității, radieri) - Formularul nr. BE-5",
+        "pdf": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/on/Formularul-nr.-BE-5.pdf",
+        "doc": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/on/Formularul-nr.-BE-5.doc"
+    },
+    {
+        "id": 48,
+        "desc": "Model de statut pentru Institutia Religioasa",
+        "pdf": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/on/20_model_de_statut_pentru_institutia_religioasa_0.pdf",
+        "doc": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/on/20_model_de_statut_pentru_institutia_religioasa_0.doc"
+    },
+    {
+        "id": 49,
+        "desc": "Model de proces-verbal de constituire pentru Institutia Religioasa",
+        "pdf": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/on/19_model_de_proces-verbal_de_constituire_pentru_institutia_religioasa.pdf",
+        "doc": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/on/19_model_de_proces-verbal_de_constituire_pentru_institutia_religioasa.doc"
+    },
+    {
+        "id": 50,
+        "desc": "Model de statut pentru Comunitate Religioasă",
+        "pdf": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/on/18_model_de_statut_pentru_comunitate_religioasa.pdf",
+        "doc": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/on/18_model_de_statut_pentru_comunitate_religioasa.doc"
+    },
+    {
+        "id": 51,
+        "desc": "Lista Fondatorilor Comunităţii Religioase",
+        "pdf": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/on/17_lista_fondatorilor_comunitatii_religioase.pdf",
+        "doc": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/on/17_lista_fondatorilor_comunitatii_religioase.doc"
+    },
+    {
+        "id": 52,
+        "desc": "Model de proces-verbal de constituire pentru Comunitate Religioasa",
+        "pdf": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/on/16_model_de_proces-verbal_de_constituire_pentru_comunitate_religioasa.pdf",
+        "doc": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/on/16_model_de_proces-verbal_de_constituire_pentru_comunitate_religioasa.doc"
+    },
+    {
+        "id": 53,
+        "desc": "Model de statut pentru Institutii Publice",
+        "pdf": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/on/15_model_de_statut_pentru_institutii_publice_0.pdf",
+        "doc": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/on/15_model_de_statut_pentru_institutii_publice_0.doc"
+    },
+    {
+        "id": 54,
+        "desc": "Model de statut pentru Asociația utilizatorilor de apă pentru irigaţii",
+        "pdf": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/on/14_model_de_statut_pentru_asociatia_utilizatorilor_de_apa_pentru_irigatii.pdf",
+        "doc": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/on/14_model_de_statut_pentru_asociatia_utilizatorilor_de_apa_pentru_irigatii.doc"
+    },
+    {
+        "id": 55,
+        "desc": "Model de listă de fondatori pentru Asociația utilizatorilor de apă pentru irigaţii",
+        "pdf": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/on/13_model_de_lista_de_fondatori_pentru_asociatia_utilizatorilor_de_apa_pentru_irigatii.pdf",
+        "doc": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/on/13_model_de_lista_de_fondatori_pentru_asociatia_utilizatorilor_de_apa_pentru_irigatii.doc"
+    },
+    {
+        "id": 56,
+        "desc": "Model de proces-verbal de constituire pentru Asociația utilizatorilor de apă pentru irigaţii",
+        "pdf": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/on/12_model_de_proces-verbal_de_constituire_pentru_asociatia_utilizatorilor_de_apa_pentru_irigatii.pdf",
+        "doc": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/on/12_model_de_proces-verbal_de_constituire_pentru_asociatia_utilizatorilor_de_apa_pentru_irigatii.doc"
+    },
+    {
+        "id": 57,
+        "desc": "Model de Acord de constituire pentru Asociația utilizatorilor de apă pentru irigaţii",
+        "pdf": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/on/11_model_de_acord_de_constituire_pentru_asociatia_utilizatorilor_de_apa_pentru_irigatii.pdf",
+        "doc": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/on/11_model_de_acord_de_constituire_pentru_asociatia_utilizatorilor_de_apa_pentru_irigatii.doc"
+    },
+    {
+        "id": 58,
+        "desc": "Model de statut pentru organizație de mediere",
+        "pdf": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/on/10_model_de_statut_pentru_organizatie_de_mediere_2.pdf",
+        "doc": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/on/10_model_de_statut_pentru_organizatie_de_mediere_2.doc"
+    },
+    {
+        "id": 59,
+        "desc": "Model de lista fondatorilor pentru organizaţie de mediere",
+        "pdf": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/on/09_model_de_lista_fondatorilor_pentru_organizatie_de_mediere_0.pdf",
+        "doc": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/on/09_model_de_lista_fondatorilor_pentru_organizatie_de_mediere_0.doc"
+    },
+    {
+        "id": 60,
+        "desc": "Model de proces-verbal de constituire pentru organizaţie de mediere",
+        "pdf": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/on/08_model_de_proces-verbal_de_constituire_pentru_organizatie_de_mediere_0.pdf",
+        "doc": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/on/08_model_de_proces-verbal_de_constituire_pentru_organizatie_de_mediere_0.doc"
+    },
+    {
+        "id": 61,
+        "desc": "Model de statut pentru institutie privata",
+        "pdf": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/on/07_model_de_statut_pentru_institutie_privata_3.pdf",
+        "doc": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/on/07_model_de_statut_pentru_institutie_privata_3.doc"
+    },
+    {
+        "id": 62,
+        "desc": "Fondatorul Instituţiei Private",
+        "pdf": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/on/06_date-fondator-institutie-privata.pdf",
+        "doc": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/on/06_date-fondator-institutie-privata.doc"
+    },
+    {
+        "id": 63,
+        "desc": "Model de Decizie de constituire pentru instituţie privată",
+        "pdf": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/on/05_model_de_decizie_de_constituire_pentru_institutie_privata_3.pdf",
+        "doc": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/on/05_model_de_decizie_de_constituire_pentru_institutie_privata_3.doc"
+    },
+    {
+        "id": 64,
+        "desc": "Model de statut pentru fundaţii",
+        "pdf": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/on/04_model_de_statut_pentru_fundatii_2.pdf",
+        "doc": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/on/04_model_de_statut_pentru_fundatii_2.doc"
+    },
+    {
+        "id": 65,
+        "desc": "Model decizie de constituire pentru fundaţii",
+        "pdf": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/on/03_model_decizie_de_constituire_pentru_fundatii_2.pdf",
+        "doc": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/on/03_model_decizie_de_constituire_pentru_fundatii_2.doc"
+    },
+    {
+        "id": 66,
+        "desc": "Model de statut pentru asociaţii obşteşti",
+        "pdf": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/on/02_model_de_statut_pentru_asociatii_obstesti_2.pdf",
+        "doc": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/on/02_model_de_statut_pentru_asociatii_obstesti_2.doc"
+    },
+    {
+        "id": 67,
+        "desc": "Model de lista fondatorilor pentru asociaţii obşteşti",
+        "pdf": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/on/01_model_de_lista_fondatorilor_pentru_asociatii_obstesti_0.pdf",
+        "doc": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/on/01_model_de_lista_fondatorilor_pentru_asociatii_obstesti_0.doc"
+    },
+    {
+        "id": 68,
+        "desc": "Model de proces-verbal pentru asociaţii obşteşti",
+        "pdf": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/on/0_model_de_proces-verbal_pentru_asociatii_obstesti.pdf",
+        "doc": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/on/0_model_de_proces-verbal_pentru_asociatii_obstesti.doc"
+    },
+    {
+        "id": 69,
+        "desc": "Model Acord de constituire al Asociaţiei de Dezvoltare Intercomunitară",
+        "pdf": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/on/28-model-acord-de-constituire-asociatiei-dezvoltare-intercomunitara.pdf",
+        "doc": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/on/28-model-acord-de-constituire-asociatiei-dezvoltare-intercomunitara.doc"
+    },
+    {
+        "id": 70,
+        "desc": "Model Statut al Asociaţiei de Dezvoltare Intercomunitară",
+        "pdf": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/on/29-model-statut-asociatiei-dezvoltare-intercomunitara.pdf",
+        "doc": "https://www.asp.gov.md/sites/default/files/servicii/e-servicii/formulare-tip/2/on/29-model-statut-asociatiei-dezvoltare-intercomunitara.doc"
+    }
+]
