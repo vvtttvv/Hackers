@@ -1,10 +1,14 @@
 .wrapper {
-    background-color: #bbbec090;
-    padding: 1%;
+    background-color: #353535;
     text-align: center;
+    padding: 1%;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+img{
+    height:40px;
 }
 
 .link {

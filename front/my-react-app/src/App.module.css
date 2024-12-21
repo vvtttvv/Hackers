@@ -1,9 +1,6 @@
 .wrapper{
-    background-image: url('./img/photo-1577046848358-4623c0859b8a.jpg');
     min-height: 100vh;
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat;
+    background-color: #2B2B2B;
 }
 
 .header{
@@ -12,5 +9,5 @@
 }
 
 .footer{
-    padding-top: 50px;
+    padding-top:60px;
 }
