@@ -3,19 +3,59 @@ from flask import jsonify
 
 app = Flask(__name__)
 
-dummy_data = [
+dummy_invoice_data = [
     {
         "issued_by": "Lorem Ipsum",
         "issued_on": "ddmmyyyy",
         "due_date": "ddmmyyyy",
         "product": "test product",
+        "email": "test@mail.ru",
         "quantity": 69,
         "unit_price": 100,
         "subtotal": 88,
         "tva": 33,
         "total": 76,
         "bank_name": "Xd",
-    }
+    },
+    {
+        "issued_by": "Lorem Ipsum",
+        "issued_on": "ddmmyyyy",
+        "due_date": "ddmmyyyy",
+        "product": "test product",
+        "email": "test@mail.ru",
+        "quantity": 69,
+        "unit_price": 100,
+        "subtotal": 88,
+        "tva": 33,
+        "total": 76,
+        "bank_name": "Xd",
+    },
+    {
+        "issued_by": "Lorem Ipsum",
+        "issued_on": "ddmmyyyy",
+        "due_date": "ddmmyyyy",
+        "product": "test product",
+        "email": "test@mail.ru",
+        "quantity": 69,
+        "unit_price": 100,
+        "subtotal": 88,
+        "tva": 33,
+        "total": 76,
+        "bank_name": "Xd",
+    },
+    {
+        "issued_by": "Lorem Ipsum",
+        "issued_on": "ddmmyyyy",
+        "due_date": "ddmmyyyy",
+        "product": "test product",
+        "email": "test@mail.ru",
+        "quantity": 69,
+        "unit_price": 100,
+        "subtotal": 88,
+        "tva": 33,
+        "total": 76,
+        "bank_name": "Xd",
+    },
 ]
 
 
