@@ -58,6 +58,16 @@ dummy_invoice_data = [
     },
 ]
 
+dummy_agenda = [
+    {
+     "id": 0,
+     "type": "TODO",
+     "content": "lorem ipsum",
+     "date": "ddmmyyyy",
+     "steps": ["aaaaaaa", "bruh", "step 3", "bruhhhh"],
+     },
+]
+
 
 @app.route("/")
 def home():
@@ -69,5 +79,15 @@ def header():
     return jsonify(dummy_invoice_data)
 
 
+@app.route("/api/agenda")
+def agenda():
+    return jsonify(dummy_agenda)
+
+
+@app.route("/api/documents")
+def documents():
+    return "docs"
+
+
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, host="0.0.0.0")
