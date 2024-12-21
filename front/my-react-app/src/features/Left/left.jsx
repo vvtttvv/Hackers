@@ -22,55 +22,85 @@ export default function DocumentsTable() {
 
   return (
     <div className={styles.wrapper}>
-      <div className={styles.statistic}>
-        <span className="material-symbols-outlined">home</span>
-        <p>0+</p>
-        <div className={styles.line}></div>
-        <p>5</p>
-      </div>
-
       <TableContainer
-        component={Paper}
-        sx={{
-          backgroundColor: '#BCB8B1',
-          padding: '16px',
-          borderRadius: '8px',
-          margin: '16px auto',
-          maxWidth: '90%',
-          maxHeight: '500px', // Ограничиваем высоту контейнера
-          overflowY: 'auto',
-        }}
-      >
-        <Table>
+  component={Paper}
+  sx={{
+    backgroundColor: '#2C3E50',
+    padding: '16px',
+    borderRadius: '12px',
+    margin: '16px auto',
+    maxWidth: '95%',
+    maxHeight: '600px',
+    overflowY: 'auto',
+    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+    '&::-webkit-scrollbar': {
+      width: '2px', // уменьшил с 4px до 2px
+      height: '2px',
+    },
+    '&::-webkit-scrollbar-track': {
+      background: 'transparent',
+      margin: '4px 0', // добавил отступы сверху и снизу
+    },
+    '&::-webkit-scrollbar-thumb': {
+      background: 'rgba(149, 165, 166, 0.3)', // сделал более прозрачным
+      borderRadius: '4px', // увеличил радиус закругления
+      '&:hover': {
+        background: 'rgba(149, 165, 166, 0.5)', // уменьшил непрозрачность при наведении
+        transition: 'background-color 0.2s ease', // добавил плавное изменение цвета
+      },
+    },
+    // Добавил стили для Firefox
+    scrollbarWidth: 'thin',
+    scrollbarColor: 'rgba(149, 165, 166, 0.3) transparent',
+  }}
+>
+        <Table stickyHeader>
           <TableHead>
             <TableRow>
-              <TableCell sx={{ color: 'white' }}>Issued By</TableCell>
-              <TableCell sx={{ color: 'white' }}>Issued On</TableCell>
-              <TableCell sx={{ color: 'white' }}>Due Date</TableCell>
-              <TableCell sx={{ color: 'white' }}>Product</TableCell>
-              <TableCell sx={{ color: 'white' }}>Email</TableCell>
-              <TableCell sx={{ color: 'white' }}>Quantity</TableCell>
-              <TableCell sx={{ color: 'white' }}>Unit Price</TableCell>
-              <TableCell sx={{ color: 'white' }}>Subtotal</TableCell>
-              <TableCell sx={{ color: 'white' }}>TVA</TableCell>
-              <TableCell sx={{ color: 'white' }}>Total</TableCell>
-              <TableCell sx={{ color: 'white' }}>Bank Name</TableCell>
+              {['Issued By', 'Issued On', 'Due Date', 'Product', 'Email', 'Quantity', 'Unit Price', 'Subtotal', 'TVA', 'Total', 'Bank Name'].map((header) => (
+                <TableCell
+                  key={header}
+                  sx={{
+                    backgroundColor: '#34495E',
+                    color: '#ECF0F1',
+                    fontSize: '0.57rem',
+                    fontWeight: 'bold',
+                    padding: '12px 16px',
+                    whiteSpace: 'nowrap',
+                  }}
+                >
+                  {header}
+                </TableCell>
+              ))}
             </TableRow>
           </TableHead>
           <TableBody>
             {documents.map((doc, index) => (
-              <TableRow key={index}>
-                <TableCell sx={{ color: 'white' }}>{doc.issued_by}</TableCell>
-                <TableCell sx={{ color: 'white' }}>{doc.issued_on}</TableCell>
-                <TableCell sx={{ color: 'white' }}>{doc.due_date}</TableCell>
-                <TableCell sx={{ color: 'white' }}>{doc.product}</TableCell>
-                <TableCell sx={{ color: 'white' }}>{doc.email}</TableCell>
-                <TableCell sx={{ color: 'white' }}>{doc.quantity}</TableCell>
-                <TableCell sx={{ color: 'white' }}>{doc.unit_price}</TableCell>
-                <TableCell sx={{ color: 'white' }}>{doc.subtotal}</TableCell>
-                <TableCell sx={{ color: 'white' }}>{doc.tva}</TableCell>
-                <TableCell sx={{ color: 'white' }}>{doc.total}</TableCell>
-                <TableCell sx={{ color: 'white' }}>{doc.bank_name}</TableCell>
+              <TableRow
+                key={index}
+                sx={{
+                  '&:nth-of-type(odd)': {
+                    backgroundColor: 'rgba(236, 240, 241, 0.05)',
+                  },
+                  '&:hover': {
+                    backgroundColor: 'rgba(236, 240, 241, 0.1)',
+                  },
+                  transition: 'background-color 0.2s ease',
+                }}
+              >
+                {Object.values(doc).map((value, cellIndex) => (
+                  <TableCell
+                    key={cellIndex}
+                    sx={{
+                      color: '#ECF0F1',
+                      fontSize: '0.57rem',
+                      padding: '8px 16px',
+                      borderBottom: '1px solid rgba(236, 240, 241, 0.1)',
+                    }}
+                  >
+                    {value}
+                  </TableCell>
+                ))}
               </TableRow>
             ))}
           </TableBody>

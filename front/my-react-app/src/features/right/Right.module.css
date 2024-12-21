@@ -1,85 +1,116 @@
 .chatContainer {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: 100%; /* Контейнер занимает всё пространство */
+  max-height: 100%; /* Убираем любые лишние скроллы */
   position: relative;
+  margin: auto;
+  width: 95%;
+  background-color: #2C3E50;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Скрываем содержимое за пределами контейнера */
 }
+
 
 .chatWindow {
   flex: 1;
-  overflow-y: auto;
-  padding: 10px;
-  background-color: #f9f9f9;
-  position: relative;
+  overflow-y: auto; /* Прокрутка только по вертикали */
+  overflow-x: hidden; /* Отключаем горизонтальную прокрутку */
+  padding: 16px;
+  background-color: transparent;
+  scrollbar-width: thin; /* Тонкий скроллбар */
+  scrollbar-color: #95A5A6 #34495E;
+
+  &::-webkit-scrollbar {
+    width: 8px; /* Ширина вертикального скроллбара */
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #34495E;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(149, 165, 166, 0.3);
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: rgba(149, 165, 166, 0.5);
+    transition: background-color 0.2s ease;
+  }
 }
 
 .message {
-  margin: 5px 0;
+  margin: 8px 0;
+  padding: 8px 12px;
+  border-radius: 8px;
+  max-width: 80%;
+  word-wrap: break-word;
 }
 
 .message.user {
   text-align: right;
-  color: blue;
+  color: #ECF0F1;
+  background-color: #34495E;
+  margin-left: auto;
 }
 
 .message.server {
   text-align: left;
-  color: green;
-}
-
-.loadingKiki {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  width: 100px;
-  height: 100px;
-}
-
-.kiki {
-  width: 100%;
-  animation: moveKiki 1s infinite alternate;
-}
-
-@keyframes moveKiki {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(20px);
-  }
+  color: #ECF0F1;
+  background-color: rgba(236, 240, 241, 0.1);
 }
 
 .container {
   display: flex;
   align-items: center;
-  padding: 10px;
-  background-color: #fff;
+  padding: 16px;
+  background-color: #34495E;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  gap: 10px;
 }
 
 .inputWrapper {
   display: flex;
   align-items: center;
   flex: 1;
+  gap: 10px;
 }
 
 .input {
   flex: 1;
-  padding: 10px;
-  margin-left: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  height: 40px;
+  padding: 0 12px;
+  border: 1px solid rgba(236, 240, 241, 0.1);
+  border-radius: 8px;
+  background-color: rgba(236, 240, 241, 0.05);
+  color: #ECF0F1;
+}
+
+.input:focus {
+  outline: none;
+  border-color: rgba(236, 240, 241, 0.2);
+  background-color: rgba(236, 240, 241, 0.08);
 }
 
 .button {
-  margin-left: 10px;
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
+  width: 40px;
+  height: 40px;
+  padding: 0 24px;
+  background-color: #3498DB;
+  color: #ECF0F1;
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;
   cursor: pointer;
+  transition: background-color 0.2s ease;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .button:hover {
-  background-color: #0056b3;
+  background-color: #2980B9;
 }
