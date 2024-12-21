@@ -1,5 +1,6 @@
 from flask import Flask
 from flask import jsonify
+from flask import request
 
 app = Flask(__name__)
 
@@ -76,17 +77,29 @@ def home():
 
 @app.route("/api/header/")
 def header():
-    return jsonify(dummy_invoice_data)
+    return jsonify("NONE")
 
 
-@app.route("/api/agenda")
-def agenda():
-    return jsonify(dummy_agenda)
+@app.route("/api/kiki")
+def agenda(q):
+    resp = groq_chat(request.args.get("q", ""))
+    return resp
 
 
 @app.route("/api/documents")
 def documents():
-    return "docs"
+    return jsonify(dummy_invoice_data)
+
+
+def groq_chat(q):
+    return """
+## This is a response from Kiki ><
+Here are your steps:
+1. step 1
+2. one more step
+3. last step :3
+
+"""
 
 
 if __name__ == "__main__":
