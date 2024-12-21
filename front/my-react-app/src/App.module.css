@@ -1,0 +1,12 @@
+.wrapper{
+    padding: 2%;
+    display: flex;
+}
+
+.firstBlock{
+    width: 60%;
+}
+
+.secondBlock{
+    width: 25%;
+}
