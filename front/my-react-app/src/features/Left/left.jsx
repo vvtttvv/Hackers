@@ -37,6 +37,8 @@ export default function DocumentsTable() {
           borderRadius: '8px',
           margin: '16px auto',
           maxWidth: '90%',
+          maxHeight: '500px', // Ограничиваем высоту контейнера
+          overflowY: 'auto',
         }}
       >
         <Table>
