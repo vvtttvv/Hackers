@@ -32,39 +32,40 @@ export default function DocumentsTable() {
       <TableContainer
         component={Paper}
         sx={{
-          backgroundColor: '#353535',
+          backgroundColor: '#BCB8B1',
           padding: '16px',
           borderRadius: '8px',
           margin: '16px auto',
           maxWidth: '90%',
         }}
       >
-        <Table>
-          <TableHead>
-            <TableRow>
-              <TableCell>Bank Name</TableCell>
-              <TableCell>Due Date</TableCell>
-              <TableCell>Email</TableCell>
-              <TableCell>Issued By</TableCell>
-              <TableCell>Product</TableCell>
-              <TableCell>Quantity</TableCell>
-              <TableCell>Total</TableCell>
+      <Table>
+        <TableHead>
+          <TableRow>
+            <TableCell sx={{ color: 'white' }}>Bank Name</TableCell>
+            <TableCell sx={{ color: 'white' }}>Due Date</TableCell>
+            <TableCell sx={{ color: 'white' }}>Email</TableCell>
+            <TableCell sx={{ color: 'white' }}>Issued By</TableCell>
+            <TableCell sx={{ color: 'white' }}>Product</TableCell>
+            <TableCell sx={{ color: 'white' }}>Quantity</TableCell>
+            <TableCell sx={{ color: 'white' }}>Total</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {documents.map((doc, index) => (
+            <TableRow key={index}>
+              <TableCell sx={{ color: 'white' }}>{doc.bank_name}</TableCell>
+              <TableCell sx={{ color: 'white' }}>{doc.due_date}</TableCell>
+              <TableCell sx={{ color: 'white' }}>{doc.email}</TableCell>
+              <TableCell sx={{ color: 'white' }}>{doc.issued_by}</TableCell>
+              <TableCell sx={{ color: 'white' }}>{doc.product}</TableCell>
+              <TableCell sx={{ color: 'white' }}>{doc.quantity}</TableCell>
+              <TableCell sx={{ color: 'white' }}>{doc.total}</TableCell>
             </TableRow>
-          </TableHead>
-          <TableBody>
-            {documents.map((doc, index) => (
-              <TableRow key={index}>
-                <TableCell>{doc.bank_name}</TableCell>
-                <TableCell>{doc.due_date}</TableCell>
-                <TableCell>{doc.email}</TableCell>
-                <TableCell>{doc.issued_by}</TableCell>
-                <TableCell>{doc.product}</TableCell>
-                <TableCell>{doc.quantity}</TableCell>
-                <TableCell>{doc.total}</TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
-        </Table>
+          ))}
+        </TableBody>
+      </Table>
+      
       </TableContainer>
     </div>
   );

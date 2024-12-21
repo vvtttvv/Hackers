@@ -1,146 +1,74 @@
-import * as React from 'react';
-import PropTypes from 'prop-types';
-import Box from '@mui/material/Box';
-import Collapse from '@mui/material/Collapse';
-import IconButton from '@mui/material/IconButton';
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import Typography from '@mui/material/Typography';
-import Paper from '@mui/material/Paper';
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
-import styles from './Right.module.css'
+import React, { useState } from 'react';
+import ReactMarkdown from 'react-markdown';
+import styles from './Right.module.css';
+import imageSrc from '../../img/Снимок_экрана_2024-12-21_202107-removebg-preview.png';
 
-function createData(name, calories, fat) {
-  return {
-    name,
-    calories,
-    fat,
-    history: [
-      {
-        date: '2020-01-05',
-        customerId: '11091700',
-        amount: 3,
-      },
-      {
-        date: '2020-01-02',
-        customerId: 'Anonymous',
-        amount: 1,
-      },
-    ],
+export default function Right() {
+  const [inputValue, setInputValue] = useState('');
+  const [messages, setMessages] = useState([]);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const newMessage = { text: inputValue, sender: 'user' };
+    setMessages((prevMessages) => [...prevMessages, newMessage]);
+    setInputValue('');
+
+    try {
+      const response = await fetch(`http://172.31.80.106:5000/api/kiki/?q=${encodeURIComponent(inputValue)}`, {
+        method: 'GET',
+        headers: { 'Content-Type': 'application/json' },
+      });
+
+      if (response.ok) {
+        const textResponse = await response.text(); // Use text(), not json()
+        const serverMessage = { text: textResponse, sender: 'server', isMarkdown: true }; // Add Markdown flag
+        setMessages((prevMessages) => [...prevMessages, serverMessage]);
+      } else {
+        const errorMessage = { text: 'Ошибка отправки сообщения', sender: 'server' };
+        setMessages((prevMessages) => [...prevMessages, errorMessage]);
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      const errorMessage = { text: 'Ошибка сети', sender: 'server' };
+      setMessages((prevMessages) => [...prevMessages, errorMessage]);
+    }
   };
-}
-
-function Row(props) {
-  const { row } = props;
-  const [open, setOpen] = React.useState(false);
 
   return (
+    <div className={styles.chatContainer}>
+      <div className={styles.chatWindow}>
+        {messages.map((message, index) => (
+          <div key={index} className={`${styles.message} ${styles[message.sender]}`}>
+            {message.isMarkdown ? (
+              <ReactMarkdown>{message.text}</ReactMarkdown> // Render Markdown
+            ) : (
+              message.text
+            )}
+          </div>
+        ))}
+      </div>
 
-    <React.Fragment>
-      <TableRow sx={{ '& > *': { borderBottom: 'unset' } }}>
-        <TableCell>
-          <IconButton
-            aria-label="expand row"
-            size="small"
-            onClick={() => setOpen(!open)}
-          >
-            {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
-          </IconButton>
-        </TableCell>
-        <TableCell component="th" scope="row">
-          {row.name}
-        </TableCell>
-        <TableCell align="right">{row.calories}</TableCell>
-        <TableCell align="right">{row.fat}</TableCell>
-      </TableRow>
-      <TableRow>
-        <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>
-          <Collapse in={open} timeout="auto" unmountOnExit>
-            <Box sx={{ margin: 1 }}>
-              <Typography variant="h6" gutterBottom component="div">
-                History
-              </Typography>
-              <Table size="small" aria-label="purchases">
-                <TableHead>
-                  <TableRow>
-                    <TableCell>Date</TableCell>
-                    <TableCell>Customer</TableCell>
-                    <TableCell align="right">Amount</TableCell>
-                  </TableRow>
-                </TableHead>
-                <TableBody>
-                  {row.history.map((historyRow) => (
-                    <TableRow key={historyRow.date}>
-                      <TableCell component="th" scope="row">
-                        {historyRow.date}
-                      </TableCell>
-                      <TableCell>{historyRow.customerId}</TableCell>
-                      <TableCell align="right">{historyRow.amount}</TableCell>
-                    </TableRow>
-                  ))}
-                </TableBody>
-              </Table>
-            </Box>
-          </Collapse>
-        </TableCell>
-      </TableRow>
-    </React.Fragment>
-  );
-}
-
-Row.propTypes = {
-  row: PropTypes.shape({
-    calories: PropTypes.number.isRequired,
-    fat: PropTypes.number.isRequired,
-    history: PropTypes.arrayOf(
-      PropTypes.shape({
-        amount: PropTypes.number.isRequired,
-        customerId: PropTypes.string.isRequired,
-        date: PropTypes.string.isRequired,
-      }),
-    ).isRequired,
-    name: PropTypes.string.isRequired,
-    price: PropTypes.number.isRequired,
-  }).isRequired,
-};
-
-const rows = [
-  createData('Frozen yoghurt', 159, 6.0, 24),
-  createData('Ice cream sandwich', 237, 9.0, 37),
-  createData('Eclair', 262, 16.0, 24),
-  createData('Cupcake', 305, 3.7, 67),
-  createData('Gingerbread', 356, 16.0, 49),
-];
-
-export default function CollapsibleTable() {
-  return (
-    <div className={styles.wrapper}>
-    <TableContainer component={Paper} sx={{
-      backgroundColor: '#353535',
-      padding: '16px',
-      minHeight: '70vh',
-      borderRadius: '25px',}}>
-      <Table aria-label="collapsible table">
-        <TableHead>
-          <TableRow>
-            <TableCell />
-            <TableCell sx={{ color: 'white' }}>Dessert (100g serving)</TableCell>
-            <TableCell align="right" sx={{ color: 'white' }}>Calories</TableCell>
-            <TableCell align="right" sx={{ color: 'white' }} >Fat&nbsp;(g)</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {rows.map((row) => (
-            <Row key={row.name} row={row}  sx={{ color: 'white' }}/>
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
+      <form className={styles.container} onSubmit={handleSubmit}>
+        <div className={styles.inputWrapper}>
+          <img src={imageSrc} alt="Новогоднее изображение" className={styles.image} />
+          <input
+            type="text"
+            className={styles.input}
+            value={inputValue}
+            onChange={(e) => setInputValue(e.target.value)}
+            placeholder="Введите сообщение"
+          />
+        </div>
+        <button type="submit" className={styles.button}>
+          Отправить
+        </button>
+      </form>
     </div>
   );
 }
+
+
+
+
+
