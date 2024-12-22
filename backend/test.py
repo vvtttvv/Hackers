@@ -1,12 +1,10 @@
 from azure.core.credentials import AzureKeyCredential
 from azure.ai.documentintelligence import DocumentIntelligenceClient
-from azure.ai.documentintelligence.models import AnalyzeResult
+# from azure.ai.documentintelligence.models import AnalyzeResult
 from azure.ai.documentintelligence.models import AnalyzeDocumentRequest
-from dotenv import load_dotenv
 import os
 import json
 from pathlib import Path
-
 
 
 def analyze_invoice(filepath, endpoint, key):

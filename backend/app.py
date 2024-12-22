@@ -18,9 +18,10 @@ from io import BytesIO
 import urllib.parse
 
 from test import analyze_invoice
-import json
+from email import policy
 
-load_dotenv()
+
+# load_dotenv()
 
 groq_api_key = os.getenv('GROQ_API_KEY')
 
@@ -383,6 +384,7 @@ def kiki():
     return resp
 
 
+@app.route("/api/documents/")
 def documents():
     # Set up the IMAP connection
     mail = imaplib.IMAP4_SSL('imap.gmail.com')
