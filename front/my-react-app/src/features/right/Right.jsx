@@ -9,7 +9,6 @@ export default function Right() {
   const [messages, setMessages] = useState([]);
   const chatWindowRef = useRef(null);
 
-  // Scroll to the latest message
   useEffect(() => {
     if (chatWindowRef.current) {
       chatWindowRef.current.scrollTop = chatWindowRef.current.scrollHeight;
@@ -103,6 +102,11 @@ export default function Right() {
   return (
     <div className={styles.chatContainer}>
       <div className={styles.chatWindow} ref={chatWindowRef}>
+        {messages[0] == undefined && 
+          <div className={styles.empty}>
+            <img src='./src/img/output-onlinegiftools.gif' alt="Something went wrong" />
+          </div>
+        }
         {messages.map((message, index) => (
           <div
             key={index}

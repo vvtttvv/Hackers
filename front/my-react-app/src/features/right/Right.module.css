@@ -49,10 +49,9 @@
 
 
 .message {
-  margin: 8px 0;
+  margin: 15px 0;
   padding: 8px;
-  max-width: 80%;
-  width: auto;
+  max-width: 90%;
   word-wrap: break-word;
   font-family: 'DotGothic16', serif;
 }
@@ -72,11 +71,20 @@
 }
 
 .message.user {
-  text-align: right;
+  text-align: left;
   color: #494949;
   background-color: #d3d673;
   margin-left: auto;
   font-family: 'DotGothic16', serif;
+}
+
+.empty{
+  margin-top: 70px;
+  text-align: center;
+}
+
+.empty img{
+    height: 250px;
 }
 
 .message.server {
