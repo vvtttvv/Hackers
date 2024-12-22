@@ -6,11 +6,9 @@ import imaplib
 import email
 from email import policy
 import os
-from PyPDF2 import PdfReader
-from docx import Document
-from PIL import Image
-import pytesseract
 from dotenv import load_dotenv
+from test import analyze_invoice
+import json
 
 
 app = Flask(__name__)
@@ -20,60 +18,13 @@ CORS(app)
 # Load environment variables from the .env file
 load_dotenv()
 
-dummy_invoice_data = [
-    {
-        "issued_by": "Lorem Ipsum",
-        "issued_on": "ddmmyyyy",
-        "due_date": "ddmmyyyy",
-        "product": "test product",
-        "email": "test@mail.ru",
-        "quantity": 69,
-        "unit_price": 100,
-        "subtotal": 88,
-        "tva": 33,
-        "total": 76,
-        "bank_name": "Xd",
-    },
-    {
-        "issued_by": "Lorem Ipsum",
-        "issued_on": "ddmmyyyy",
-        "due_date": "ddmmyyyy",
-        "product": "test product",
-        "email": "test@mail.ru",
-        "quantity": 69,
-        "unit_price": 100,
-        "subtotal": 88,
-        "tva": 33,
-        "total": 76,
-        "bank_name": "Xd",
-    },
-    {
-        "issued_by": "Lorem Ipsum",
-        "issued_on": "ddmmyyyy",
-        "due_date": "ddmmyyyy",
-        "product": "test product",
-        "email": "test@mail.ru",
-        "quantity": 69,
-        "unit_price": 100,
-        "subtotal": 88,
-        "tva": 33,
-        "total": 76,
-        "bank_name": "Xd",
-    },
-    {
-        "issued_by": "Lorem Ipsum",
-        "issued_on": "ddmmyyyy",
-        "due_date": "ddmmyyyy",
-        "product": "test product",
-        "email": "test@mail.ru",
-        "quantity": 69,
-        "unit_price": 100,
-        "subtotal": 88,
-        "tva": 33,
-        "total": 76,
-        "bank_name": "Xd",
-    },
-]
+endpoint = os.getenv("ENDPOINT")
+key = os.getenv("AZURE_KEY")
+
+
+# Directory to save attachments
+attachments_dir = 'attachments'
+os.makedirs(attachments_dir, exist_ok=True)
 
 
 @app.route("/")
@@ -94,7 +45,6 @@ def agenda():
 
 @app.route("/api/documents")
 def documents():
-
     # Set up the IMAP connection
     mail = imaplib.IMAP4_SSL('imap.gmail.com')
     mail.login(os.getenv("USERNAME"), os.getenv("PASSWORD"))
@@ -135,51 +85,65 @@ def documents():
     mail.close()
     mail.logout()
 
-    return jsonify(dummy_invoice_data)
+    invoices=get_json_files()
 
+    print(invoices)
 
-# Directory to save attachments
-attachments_dir = 'attachments'
-os.makedirs(attachments_dir, exist_ok=True)
+    return jsonify(invoices)
 
-def extract_text_from_pdf(file_path):
-    """Extract text from a PDF file."""
-    reader = PdfReader(file_path)
-    text = ""
-    for page in reader.pages:
-        text += page.extract_text()
-    return text
-
-def extract_text_from_docx(file_path):
-    """Extract text from a Word document."""
-    doc = Document(file_path)
-    return '\n'.join([p.text for p in doc.paragraphs])
-
-def extract_text_from_image(file_path):
-    """Extract text from an image using Tesseract."""
-    image = Image.open(file_path)
-    return pytesseract.image_to_string(image)
 
 def process_attachment(part, filename):
     """Save attachment and extract text if applicable."""
-    file_path = os.path.join(attachments_dir, filename)
-    with open(file_path, 'wb') as f:
-        f.write(part.get_payload(decode=True))
-    print(f"Saved attachment: {file_path}")
     
-    # Extract text based on file type
-    if filename.endswith('.pdf'):
-        print("Extracted text from PDF:")
-        print(extract_text_from_pdf(file_path))
-    elif filename.endswith('.docx'):
-        print("Extracted text from Word document:")
-        print(extract_text_from_docx(file_path))
-    elif filename.endswith(('.png', '.jpg', '.jpeg')):
-        print("Extracted text from image:")
-        print(extract_text_from_image(file_path))
-    else:
-        print("File type not supported for text extraction.")
+    # Process PDF files only
+    if filename.lower().endswith('.pdf'):  # Check if the file is a PDF first
+        # Define the file path for saving the PDF attachment
+        file_path = os.path.join(attachments_dir, filename)
 
+        # Check if the file is already in the attachments folder (avoid duplicates)
+        if os.path.exists(file_path):
+            print(f"File {filename} already exists in attachments. Skipping...")
+            return  # Skip processing if the file already exists
+
+        # Save the PDF attachment to the attachments folder
+        with open(file_path, 'wb') as f:
+            f.write(part.get_payload(decode=True))
+        print(f"Saved attachment: {file_path}")
+
+        # Process the saved PDF file for invoice analysis
+        print(f"Processing PDF attachment: {filename}")
+        analyze_invoice(file_path,endpoint,key)
+    else:
+        print(f"File {filename} is not a PDF and will not be processed.")
+
+
+
+def get_json_files():
+    # Directory where JSON files are stored
+    json_dir = 'invoices'
+
+    # List to hold all the JSON data
+    all_json_data = {}
+
+    # Iterate over all files in the directory
+    for filename in os.listdir(json_dir):
+        # Only process JSON files
+        if filename.endswith('.json'):
+            file_path = os.path.join(json_dir, filename)
+            
+            # Open and load the JSON file content
+            with open(file_path, 'r') as json_file:
+                try:
+                    # Parse the JSON file content
+                    file_data = json.load(json_file)
+                    # Use the filename (without extension) as the key
+                    file_key = os.path.splitext(filename)[0]
+                    all_json_data[file_key] = file_data
+                except json.JSONDecodeError:
+                    print(f"Error decoding JSON from {filename}")
+    
+    # Return the data as a JSON response
+    return all_json_data
 
 
 def groq_chat(q):
@@ -190,6 +154,8 @@ Here are your steps:\n
 2. one more step\n
 3. last step :3\n
 """ + q
+
+
 
 
 if __name__ == "__main__":
