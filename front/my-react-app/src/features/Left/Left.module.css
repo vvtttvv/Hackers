@@ -65,3 +65,33 @@ span {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     font-family: 'DotGothic16', serif; /* Apply font */
 }
+
+
+.retro_checkbox {
+    width: 16px;
+    height: 16px;
+    margin: 0;
+    cursor: pointer;
+    background-color: #ddd;
+    border: 2px solid #bbb;
+    box-shadow: 2px 2px 4px #999 inset, -2px -2px 4px #fff inset;
+    outline: none;
+    position: relative;
+  }
+
+  .retro-checkbox:checked {
+    background-color: #4caf50;
+    border: 2px solid #4caf50;
+    box-shadow: 2px 2px 4px #2e7d32 inset, -2px -2px 4px #81c784 inset;
+  }
+
+  .retro-checkbox:checked::before {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    top: 5px;
+    left: 5px;
+    background-color: white;
+    box-shadow: inset -2px -2px 2px #bbb, inset 2px 2px 2px #333;
+  }
