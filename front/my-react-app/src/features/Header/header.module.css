@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+
+.Header {
+    background: linear-gradient(96deg, #D4D0C8, #ECF0F1);
+    padding-left: 10%;
+    padding-right: 10%;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'DotGothic16', serif; 
+    position: relative;
+}
+
+img {
+    height: 30px;
+}
+
+.another_img{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-style: outset;
+    border-width: 3px;
+    border-color: #F5F5F5;
+}
+
+.link {
+    color: #000;
+    text-decoration: none; 
+    font-size: 18px;
+    margin: 0 75px; 
+    font-family: 'DotGothic16', serif;
+}
+
+.link:hover {
+    text-decoration: underline;
+    font-family: 'DotGothic16', serif; 
+}
+
+.image {
+    position: relative;
+}
+
+.cat {
+    margin-bottom: -30px;
+    animation: moveCat 15s infinite linear;
+}
+
+.button{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-style: outset;
+    border-width: 3px;
+    border-color: #F5F5F5;
+}
+
+
+@keyframes moveCat {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-800%); 
+    }
+    26% {
+        transform: translateX(-800%) scaleX(-1); 
+    }
+    75% {
+        transform: translateX(800%) scaleX(-1); 
+    }
+    76% {
+        transform: translateX(800%) scaleX(1);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}

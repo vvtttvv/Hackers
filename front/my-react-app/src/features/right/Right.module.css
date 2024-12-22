@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+
+
+.chatContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Контейнер занимает всё пространство */
+  min-height: 490px;
+  position: relative;
+  margin: auto;
+  width: 95%;
+  background-color: #c9c2b7;
+  border-style: outset;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Скрываем содержимое за пределами контейнера */
+  font-family: 'DotGothic16', serif; /* Apply font */
+  max-height: 300px;
+}
+
+
+.chatWindow {
+  flex: 1;
+  overflow-y: auto; /* Прокрутка только по вертикали */
+  overflow-x: hidden; /* Отключаем горизонтальную прокрутку */
+  padding: 16px;
+  background-color: transparent;
+  scrollbar-width: thin; /* Тонкий скроллбар */
+  scrollbar-color: #95A5A6 #D4D0C8;
+
+  &::-webkit-scrollbar {
+    width: 8px; /* Ширина вертикального скроллбара */
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #34495E;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(149, 165, 166, 0.3);
+
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: rgba(149, 165, 166, 0.5);
+    transition: background-color 0.2s ease;
+  }
+  font-family: 'DotGothic16', serif; 
+}
+
+
+.message {
+  margin: 15px 0;
+  padding: 8px;
+  max-width: 90%;
+  word-wrap: break-word;
+  font-family: 'DotGothic16', serif;
+}
+
+.image{
+  float: left;
+  margin-top: -15px;
+  margin-left: -15px;
+  border-radius: 15px;
+  width: fit-content;
+}
+
+.image img{
+  background-color: #F5F5F5;
+  border-radius: 100px;
+  border: 2px solid #fff;
+}
+
+.message.user {
+  text-align: left;
+  color: #494949;
+  background-color: #d3d673;
+  margin-left: auto;
+  font-family: 'DotGothic16', serif;
+}
+
+.empty{
+  margin-top: 70px;
+  text-align: center;
+}
+
+.empty img{
+    height: 250px;
+}
+
+.message.server {
+  text-align: left;
+  color: #494949;
+  background-color: rgba(236, 240, 241, 0.411);
+  font-family: 'DotGothic16', serif;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  background-color: #D4D0C8;
+
+  gap: 10px;
+  font-family: 'DotGothic16', serif; 
+}
+
+.inputWrapper {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  gap: 10px;
+  font-family: 'DotGothic16', serif;
+}
+
+.input {
+  flex: 1;
+  height: 40px;
+  padding: 0 12px;
+  border: 1px solid rgba(236, 240, 241, 0.1);
+  letter-spacing: 0.25rem;
+  background-color: rgba(236, 240, 241, 0.05);
+  color: #494949;
+  font-family: 'DotGothic16', serif; 
+}
+
+.input:focus {
+  outline: none;
+  border-color: rgba(236, 240, 241, 0.2);
+  background-color: rgba(236, 240, 241, 0.08);
+  font-family: 'DotGothic16', serif; /* Apply font */
+}
+
+.button {
+  width: 40px;
+  height: 40px;
+  padding: 0 24px;
+  background-color: #c0c0c0;
+  color: #ECF0F1;
+  border-style: outset;
+  border-width: 3px;
+  border-color: #F5F5F5;
+  
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'DotGothic16', serif; 
+}
+
+.button:active {
+
+  border-style: inset;
+}

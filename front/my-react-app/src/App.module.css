@@ -1,12 +1,11 @@
 .wrapper{
-    padding: 2%;
-    display: flex;
+    min-height: 100vh;
+    background-color: #03bdbd    ;
 }
 
-.firstBlock{
-    width: 60%;
+.header{
+    position: relative;
+    width: 100%;
+    z-index: 10;
 }
 
-.secondBlock{
-    width: 25%;
-}
