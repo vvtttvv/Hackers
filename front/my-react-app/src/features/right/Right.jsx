@@ -2,8 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import styles from './Right.module.css';
-import imageSrc from '../../img/Снимок_экрана_2024-12-21_202107-removebg-preview.png';
-import SendIcon from '@mui/icons-material/Send';
+
 
 export default function Right() {
   const [inputValue, setInputValue] = useState('');
@@ -119,22 +118,19 @@ export default function Right() {
       {/* Input form */}
       <form className={styles.container} onSubmit={handleSubmit}>
         <div className={styles.inputWrapper}>
-          <img
-            src={imageSrc}
-            alt="Новогоднее изображение"
-            className={styles.image}
-          />
+         
           <input
             type="text"
             className={styles.input}
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
             onKeyPress={handleKeyPress}
-            placeholder="Введите сообщение"
+            placeholder="As dori sa..."
+          
           />
         </div>
         <button type="submit" className={styles.button}>
-          <SendIcon style={{ fontSize: '20px', margin: 'auto' }} />
+          <img src='https://files.catbox.moe/ct7b3u.png' style={{ fontSize: '20px', margin: 'auto' }} />
         </button>
       </form>
     </div>

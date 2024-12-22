@@ -1,13 +1,4 @@
-
-@font-face {
-  font-family: 'DefaultF'; /* Name for the font */
-  src: url('../../fonts/CozetteVector.tff') format('tff'); /* Path to the font file */
-  font-weight: normal; /* Optional: Specify weight */
-  font-style: normal;  /* Optional: Specify style */
-}
-body, html {
-  font-family: 'DefaultF'; /* Fallback to a similar font in case the custom font fails */
-}
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
 
 
 .chatContainer {
@@ -19,10 +10,11 @@ body, html {
   position: relative;
   margin: auto;
   width: 95%;
-  background-color: #2C3E50;
-  border-radius: 12px;
+  background-color: #c9c2b7;
+  border-style: outset;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden; /* Скрываем содержимое за пределами контейнера */
+  font-family: 'DotGothic16', serif; /* Apply font */
 }
 
 
@@ -33,7 +25,7 @@ body, html {
   padding: 16px;
   background-color: transparent;
   scrollbar-width: thin; /* Тонкий скроллбар */
-  scrollbar-color: #95A5A6 #34495E;
+  scrollbar-color: #95A5A6 #D4D0C8;
 
   &::-webkit-scrollbar {
     width: 8px; /* Ширина вертикального скроллбара */
@@ -45,21 +37,23 @@ body, html {
 
   &::-webkit-scrollbar-thumb {
     background: rgba(149, 165, 166, 0.3);
-    border-radius: 4px;
+
   }
 
   &::-webkit-scrollbar-thumb:hover {
     background: rgba(149, 165, 166, 0.5);
     transition: background-color 0.2s ease;
   }
+  font-family: 'DotGothic16', serif; /* Apply font */
 }
 
 .message {
   margin: 8px 0;
   padding: 8px 12px;
-  border-radius: 8px;
+  
   max-width: 80%;
   word-wrap: break-word;
+  font-family: 'DotGothic16', serif; /* Apply font */
 }
 
 .message.user {
@@ -67,22 +61,24 @@ body, html {
   color: #ECF0F1;
   background-color: #34495E;
   margin-left: auto;
+  font-family: 'DotGothic16', serif; /* Apply font */
 }
 
 .message.server {
   text-align: left;
   color: #ECF0F1;
   background-color: rgba(236, 240, 241, 0.1);
+  font-family: 'DotGothic16', serif; /* Apply font */
 }
 
 .container {
   display: flex;
   align-items: center;
   padding: 16px;
-  background-color: #34495E;
-  border-bottom-left-radius: 12px;
-  border-bottom-right-radius: 12px;
+  background-color: #D4D0C8;
+
   gap: 10px;
+  font-family: 'DotGothic16', serif; /* Apply font */
 }
 
 .inputWrapper {
@@ -90,6 +86,7 @@ body, html {
   align-items: center;
   flex: 1;
   gap: 10px;
+  font-family: 'DotGothic16', serif; /* Apply font */
 }
 
 .input {
@@ -97,33 +94,39 @@ body, html {
   height: 40px;
   padding: 0 12px;
   border: 1px solid rgba(236, 240, 241, 0.1);
-  border-radius: 8px;
+  letter-spacing: 0.25rem;
   background-color: rgba(236, 240, 241, 0.05);
   color: #ECF0F1;
+  font-family: 'DotGothic16', serif; /* Apply font */
 }
 
 .input:focus {
   outline: none;
   border-color: rgba(236, 240, 241, 0.2);
   background-color: rgba(236, 240, 241, 0.08);
+  font-family: 'DotGothic16', serif; /* Apply font */
 }
 
 .button {
   width: 40px;
   height: 40px;
   padding: 0 24px;
-  background-color: #3498DB;
+  background-color: #c0c0c0;
   color: #ECF0F1;
-  border: none;
-  border-radius: 8px;
+  border-style: outset;
+  border-width: 3px;
+  border-color: #F5F5F5;
+  
   cursor: pointer;
   transition: background-color 0.2s ease;
   white-space: nowrap;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: 'DotGothic16', serif; /* Apply font */
 }
 
-.button:hover {
-  background-color: #2980B9;
+.button:active {
+
+  border-style: inset;
 }

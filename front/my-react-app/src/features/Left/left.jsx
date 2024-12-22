@@ -12,61 +12,31 @@ export default function DocumentsTable() {
   const [documents, setDocuments] = useState([]);
 
   useEffect(() => {
-    /*fetch('http://172.31.80.106:5000/api/documents')
+    fetch('http://172.31.80.106:5000/api/documents')
       .then((response) => response.json())
       .then((data) => {
         setDocuments(data);
       })
-      .catch((error) => console.error('Error fetching data:', error));*/
+      .catch((error) => console.error('Error fetching data:', error));
   }, []);
 
   return (
     <div className={styles.wrapper}>
-      <TableContainer
-  component={Paper}
-  sx={{
-    backgroundColor: '#2C3E50',
-    padding: '16px',
-    borderRadius: '12px',
-    margin: '16px auto',
-    maxWidth: '95%',
-    maxHeight: '600px',
-    overflowY: 'auto',
-    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
-    '&::-webkit-scrollbar': {
-      width: '2px', // уменьшил с 4px до 2px
-      height: '2px',
-    },
-    '&::-webkit-scrollbar-track': {
-      background: 'transparent',
-      margin: '4px 0', // добавил отступы сверху и снизу
-    },
-    '&::-webkit-scrollbar-thumb': {
-      background: 'rgba(149, 165, 166, 0.3)', // сделал более прозрачным
-      borderRadius: '4px', // увеличил радиус закругления
-      '&:hover': {
-        background: 'rgba(149, 165, 166, 0.5)', // уменьшил непрозрачность при наведении
-        transition: 'background-color 0.2s ease', // добавил плавное изменение цвета
-      },
-    },
-    // Добавил стили для Firefox
-    scrollbarWidth: 'thin',
-    scrollbarColor: 'rgba(149, 165, 166, 0.3) transparent',
-  }}
->
-        <Table stickyHeader>
+   
+        <Table stickyHeader sx={{ fontFamily: 'DotGothic16, serif', maxHeight: '490px', minHeight: '490px'}}>
           <TableHead>
             <TableRow>
               {['Issued By', 'Issued On', 'Due Date', 'Product', 'Email', 'Quantity', 'Unit Price', 'Subtotal', 'TVA', 'Total', 'Bank Name'].map((header) => (
                 <TableCell
                   key={header}
                   sx={{
-                    backgroundColor: '#34495E',
-                    color: '#ECF0F1',
+                    backgroundColor: '#D4D0C8',
+                    color: '#000',
                     fontSize: '0.57rem',
                     fontWeight: 'bold',
                     padding: '12px 16px',
                     whiteSpace: 'nowrap',
+                    fontFamily: 'DotGothic16, serif', // Force font for the header
                   }}
                 >
                   {header}
@@ -80,22 +50,24 @@ export default function DocumentsTable() {
                 key={index}
                 sx={{
                   '&:nth-of-type(odd)': {
-                    backgroundColor: 'rgba(236, 240, 241, 0.05)',
+                    backgroundColor: '#d9b8b8',
                   },
                   '&:hover': {
-                    backgroundColor: 'rgba(236, 240, 241, 0.1)',
+                    backgroundColor: 'rgb(159, 202, 213)',
                   },
                   transition: 'background-color 0.2s ease',
+                  fontFamily: 'DotGothic16, serif', // Apply font for rows
                 }}
               >
                 {Object.values(doc).map((value, cellIndex) => (
                   <TableCell
                     key={cellIndex}
                     sx={{
-                      color: '#ECF0F1',
+                      color: '#000',
                       fontSize: '0.57rem',
                       padding: '8px 16px',
-                      borderBottom: '1px solid rgba(236, 240, 241, 0.1)',
+                      borderBottom: '1px solid rgba(229, 231, 166, 0.1)',
+                      fontFamily: 'DotGothic16, serif', // Apply font for cells
                     }}
                   >
                     {value}
@@ -105,7 +77,7 @@ export default function DocumentsTable() {
             ))}
           </TableBody>
         </Table>
-      </TableContainer>
+      
     </div>
   );
 }

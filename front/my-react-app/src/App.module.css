@@ -1,6 +1,6 @@
 .wrapper{
     min-height: 100vh;
-    background-color: #131c24  ;
+    background-color: #008080  ;
 }
 
 .header{
@@ -11,3 +11,4 @@
 .footer{
     padding-top:60px;
 }
+

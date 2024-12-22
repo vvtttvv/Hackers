@@ -1,36 +1,56 @@
+
 @import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
 
-.dotgothic16-regular {
-    font-family: "DefaultF", serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-body, html {
-    font-family: 'DefaultF', serif; /* Fallback to a similar font in case the custom font fails */
+.wrapper {
+    /*padding: 2px;*/
+    min-height: 490px; /* Minimum height for the wrapper */
+    max-height: 490px; /* Maximum height relative to the viewport */
+    overflow-y: auto; /* Enable vertical scrolling */
+
+    font-family: 'DotGothic16', serif; /* Apply font */
+    background-color: #c9c2b7; /* Optional gradient background */
+    scrollbar-width: thin; /* For Firefox */
+    /*scrollbar-color: rgba(149, 165, 166, 0.3) transparent; /* Custom scrollbar colors */
+    border-style: outset;
 }
 
-
-.wrapper{
-    padding: 2px;
-    min-height: 70vh;
-    border-radius: 25px;
+.wrapper::-webkit-scrollbar {
+    width: 8px; /* Width of vertical scrollbar */
 }
 
-.statistic{
+.wrapper::-webkit-scrollbar-track {
+    background: transparent; /* Background of scrollbar track */
+}
+
+.wrapper::-webkit-scrollbar-thumb {
+    background: rgba(149, 165, 166, 0.3); /* Thumb color */
+    border-radius: 4px;
+}
+
+.wrapper::-webkit-scrollbar-thumb:hover {
+    background: rgba(149, 165, 166, 0.5); /* Thumb color on hover */
+}
+
+.wrapper table,
+.wrapper th,
+.wrapper td {
+    font-family: 'DotGothic16', serif !important; /* Force the font globally on table elements */
+}
+
+.statistic {
     padding-left: 25px;
     background-color: #BCB8B1;
     margin-bottom: 25px;
     display: flex;
-    color: #fff;
+    color: #000;
     border-radius: 25px;
     text-align: center;
     justify-content: center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    font-family: 'DefaultF', serif;
+    font-family: 'DotGothic16', serif; /* Apply font */
 }
 
-.line{
+.line {
     width: 2px;
     margin-top: 5px;
     border-radius: 50px;
@@ -38,17 +58,16 @@ body, html {
     background-color: #fdfdfd90;
     margin-left: 25px;
     margin-right: 25px;
-    font-family: 'DefaultF', serif;
-
 }
 
-span{
+span {
     margin-top: 10px;
+    font-family: 'DotGothic16', serif; /* Apply font */
 }
 
-.messages{
+.messages {
     background-color: #dae2e7;
     border-radius: 25px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    font-family: 'DefaultF', serif;
+    font-family: 'DotGothic16', serif; /* Apply font */
 }
