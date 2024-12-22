@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 import styles from './Right.module.css';
 import imageSrc from '../../img/Снимок_экрана_2024-12-21_202107-removebg-preview.png';
 import SendIcon from '@mui/icons-material/Send';
@@ -65,6 +66,38 @@ export default function Right() {
     }
   };
 
+  const MarkdownWithCheckboxes = ({ text }) => (
+    <ReactMarkdown
+      children={text}
+      remarkPlugins={[remarkGfm]}
+      components={{
+        // Custom renderer for text to add checkboxes before "*Step" or "**Step"
+        text: ({ children }) => {
+          const stepRegex = /(\*{1,2}Step\b)/g; // Matches "*Step" or "**Step"
+          const parts = children[0].split(stepRegex);
+  
+          return (
+            <>
+              {parts.map((part, index) => (
+                <React.Fragment key={index}>
+                  {part.match(stepRegex) ? (
+                    <>
+                      <input type="checkbox" style={{ margin: '0 4px' }} />
+                      {part}
+                    </>
+                  ) : (
+                    part
+                  )}
+                </React.Fragment>
+              ))}
+            </>
+          );
+        },
+      }}
+    />
+  );
+  
+
   return (
     <div className={styles.chatContainer}>
       {/* Chat messages display */}
@@ -75,7 +108,7 @@ export default function Right() {
             className={`${styles.message} ${styles[message.sender]}`}
           >
             {message.isMarkdown ? (
-              <ReactMarkdown>{message.text}</ReactMarkdown>
+              <MarkdownWithCheckboxes text={message.text} />
             ) : (
               message.text
             )}

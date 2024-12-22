@@ -1,3 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+
+.dotgothic16-regular {
+    font-family: "DefaultF", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+body, html {
+    font-family: 'DefaultF', serif; /* Fallback to a similar font in case the custom font fails */
+}
+
+
 .wrapper{
     padding: 2px;
     min-height: 70vh;
@@ -14,6 +27,7 @@
     text-align: center;
     justify-content: center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-family: 'DefaultF', serif;
 }
 
 .line{
@@ -24,6 +38,7 @@
     background-color: #fdfdfd90;
     margin-left: 25px;
     margin-right: 25px;
+    font-family: 'DefaultF', serif;
 
 }
 
@@ -35,4 +50,5 @@ span{
     background-color: #dae2e7;
     border-radius: 25px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-family: 'DefaultF', serif;
 }

@@ -12,12 +12,12 @@ export default function DocumentsTable() {
   const [documents, setDocuments] = useState([]);
 
   useEffect(() => {
-    fetch('http://172.31.80.106:5000/api/documents')
+    /*fetch('http://172.31.80.106:5000/api/documents')
       .then((response) => response.json())
       .then((data) => {
         setDocuments(data);
       })
-      .catch((error) => console.error('Error fetching data:', error));
+      .catch((error) => console.error('Error fetching data:', error));*/
   }, []);
 
   return (

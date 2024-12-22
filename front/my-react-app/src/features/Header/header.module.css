@@ -1,3 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+
+.dotgothic16-regular {
+    font-family: "DefaultF", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+body, html {
+    font-family: 'DefaultF', serif; /* Fallback to a similar font in case the custom font fails */
+}
+
 .wrapper {
     background-color: #1e2b38 ;
     text-align: center;

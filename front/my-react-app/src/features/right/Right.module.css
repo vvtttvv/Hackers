@@ -1,8 +1,21 @@
+
+@font-face {
+  font-family: 'DefaultF'; /* Name for the font */
+  src: url('../../fonts/CozetteVector.tff') format('tff'); /* Path to the font file */
+  font-weight: normal; /* Optional: Specify weight */
+  font-style: normal;  /* Optional: Specify style */
+}
+body, html {
+  font-family: 'DefaultF'; /* Fallback to a similar font in case the custom font fails */
+}
+
+
 .chatContainer {
   display: flex;
   flex-direction: column;
   height: 100%; /* Контейнер занимает всё пространство */
-  max-height: 100%; /* Убираем любые лишние скроллы */
+  min-height: 490px;
+  max-height: 490px; /* Optional fixed height for testing */
   position: relative;
   margin: auto;
   width: 95%;
