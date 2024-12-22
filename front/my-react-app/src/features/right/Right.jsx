@@ -17,9 +17,11 @@ export default function Right() {
   }, [messages]);
 
   const handleSendMessage = async () => {
-    if (!inputValue.trim()) return; // Prevent sending empty messages
-
-    const userMessage = { text: inputValue, sender: 'user' };
+    if (!inputValue.trim()) return; 
+    const userMessage = { text: inputValue, 
+                          sender: 'user',
+                          avatar: './src/img/mary.png'
+                        };
     setMessages((prevMessages) => [...prevMessages, userMessage]);
     setInputValue('');
 
@@ -38,16 +40,18 @@ export default function Right() {
           text: textResponse,
           sender: 'server',
           isMarkdown: true,
+          avatar: './src/img/output-onlinegiftools.gif',
         };
         setMessages((prevMessages) => [...prevMessages, serverMessage]);
       } else {
-        throw new Error('Ошибка отправки сообщения');
+        throw new Error('Error');
       }
     } catch (error) {
       console.error('Error:', error);
       const errorMessage = {
-        text: error.message || 'Ошибка сети',
+        text: error.message || 'WiFi Error',
         sender: 'server',
+        avatar: './src/img/error-avatar.png', 
       };
       setMessages((prevMessages) => [...prevMessages, errorMessage]);
     }
@@ -70,9 +74,8 @@ export default function Right() {
       children={text}
       remarkPlugins={[remarkGfm]}
       components={{
-        // Custom renderer for text to add checkboxes before "*Step" or "**Step"
         text: ({ children }) => {
-          const stepRegex = /(\*{1,2}Step\b)/g; // Matches "*Step" or "**Step"
+          const stepRegex = /(\*{1,2}Step\b)/g; 
           const parts = children[0].split(stepRegex);
   
           return (
@@ -99,13 +102,15 @@ export default function Right() {
 
   return (
     <div className={styles.chatContainer}>
-      {/* Chat messages display */}
       <div className={styles.chatWindow} ref={chatWindowRef}>
         {messages.map((message, index) => (
           <div
             key={index}
             className={`${styles.message} ${styles[message.sender]}`}
           >
+            <div className={styles.image}>    
+              <img src={message.avatar} alt="Something went wrong" />
+            </div>
             {message.isMarkdown ? (
               <MarkdownWithCheckboxes text={message.text} />
             ) : (
@@ -115,7 +120,6 @@ export default function Right() {
         ))}
       </div>
 
-      {/* Input form */}
       <form className={styles.container} onSubmit={handleSubmit}>
         <div className={styles.inputWrapper}>
          
@@ -129,6 +133,7 @@ export default function Right() {
           
           />
         </div>
+        
         <button type="submit" className={styles.button}>
           <img src='https://files.catbox.moe/ct7b3u.png' style={{ fontSize: '20px', margin: 'auto' }} />
         </button>

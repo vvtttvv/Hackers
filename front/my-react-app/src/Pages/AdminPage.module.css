@@ -2,13 +2,14 @@
     display: flex;
     justify-content: space-between;
     padding: 2%;
+    padding-right: 1%;
 }
 
 .firstBlock{
     width: 70%;
+    position: relative;
 }
 
 .secondBlock{
     width: 30%;
-    margin-right: 30px;
 }

@@ -1,14 +1,11 @@
 .wrapper{
     min-height: 100vh;
-    background-color: #008080  ;
+    background-color: #8cd3e4  ;
 }
 
 .header{
-    position: absolute;
+    position: relative;
     width: 100%;
-}
-
-.footer{
-    padding-top:60px;
+    z-index: 10;
 }
 

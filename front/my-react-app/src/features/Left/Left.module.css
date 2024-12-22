@@ -1,34 +1,28 @@
-
 @import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
 
 .wrapper {
-    /*padding: 2px;*/
-    min-height: 490px; /* Minimum height for the wrapper */
-    max-height: 490px; /* Maximum height relative to the viewport */
-    overflow-y: auto; /* Enable vertical scrolling */
-
-    font-family: 'DotGothic16', serif; /* Apply font */
-    background-color: #c9c2b7; /* Optional gradient background */
-    scrollbar-width: thin; /* For Firefox */
-    /*scrollbar-color: rgba(149, 165, 166, 0.3) transparent; /* Custom scrollbar colors */
+    min-height: 490px;
+    max-height: 490px;
+    overflow-y: auto; 
+    font-family: 'DotGothic16', serif; 
+    background-color: #c9c2b7;
+    scrollbar-width: thin; 
     border-style: outset;
-}
-
-.wrapper::-webkit-scrollbar {
-    width: 8px; /* Width of vertical scrollbar */
+    scrollbar-width: thin; 
+    scrollbar-color: #95A5A6 #D4D0C8;
 }
 
 .wrapper::-webkit-scrollbar-track {
-    background: transparent; /* Background of scrollbar track */
+    background: transparent;
 }
 
 .wrapper::-webkit-scrollbar-thumb {
-    background: rgba(149, 165, 166, 0.3); /* Thumb color */
+    background: rgba(149, 165, 166, 0.3);
     border-radius: 4px;
 }
 
 .wrapper::-webkit-scrollbar-thumb:hover {
-    background: rgba(149, 165, 166, 0.5); /* Thumb color on hover */
+    background: rgba(149, 165, 166, 0.5); 
 }
 
 .wrapper table,
